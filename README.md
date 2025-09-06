@@ -1,69 +1,27 @@
-# React + TypeScript + Vite
+# [🏋️ Body Transformation](https://body-transformation-one.vercel.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Body Transformation** is a web app that lets you explore how your body might change over time based on daily habits like calories, sleep, steps, and activity. Enter your stats, adjust inputs, add per-day overrides (like a big cheat meal or poor sleep), and the app forecasts your weight, body fat, and lean mass.
 
-Currently, two official plugins are available:
+Built with **React + Vite + TypeScript + TailwindCSS** and deployed on **Vercel**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 📊 **Forecast Simulation**  
+  Uses energy balance + partitioning rules to project weight, body fat %, lean mass, and fat mass.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 📝 **Profile & Measurements**  
+  Enter sex, age, height, weight, and tape measurements (neck, waist, hip) to estimate starting body composition.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- ⚡ **Daily Inputs**  
+  Adjust calories, steps, sleep, and activity level to see how habits affect long-term outcomes.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- 🔄 **Per-Day Overrides**  
+  Log special days (extra calories, low sleep, etc.) to see how they shift your trajectory.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- 📈 **Charts**  
+  Interactive graphs for weight, body fat %, lean mass (and fat mass if enabled).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- 🎨 **Responsive UI**  
+  Clean design with TailwindCSS, works on desktop and mobile.
